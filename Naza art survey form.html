@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>Naza art Survey Form</title>
+        <link rel="stylesheet" href="nazaArtStyles.css">
+    </head>
+    <body>
+        <div class="container">
+            <h1 id="title" class="center">Naza art Survey Form</h1>
+            <p id="description" class="center subtitle">¡Gracias por tomarte un tiempo para ayudarnos a mejorar!</p>
+            <form id="survey-form">
+                <section>
+                    <div class="labelInputDiv">
+                        <label id="name-label" for="name">
+                            Nombre
+                        </label>
+                        <input id="name" class="infoInput" type="text" placeholder="Coloque su nombre" required/>
+                    </div>
+                    <div class="labelInputDiv">
+                        <label id="last-name-label">
+                            Apellido
+                        </label>
+                        <input id="last-name" class="infoInput" type="text" placeholder="Coloque su apellido" required/>
+                    </div>
+                    <div class="labelInputDiv">
+                        <label id="email-label">
+                            Email
+                        </label>
+                        <input id="email" class="infoInput" type="email" placeholder="Coloque su email" required/>
+                    </div>
+                    <div class="labelInputDiv">
+                        <label id="number-label">
+                            Edad
+                        </label>
+                        <input id="number" class="infoInput" type="number" min="1" max="25" placeholder="Coloque su edad"/>
+                    </div>
+                </section>
+                <select id="dropdown">
+                <option>a</option>
+                <option>b</option>
+                </select>
+                    <label><input id="dropdown" name="gar" type="radio" value="1a"/>Gar</label>
+                    <label><input id="dropdown" name="gar" type="radio" value="2a"/>cha</label>
+                    <label><input id="dropdown" name="cha" type="radio" value="3a"/>de</label>
+                    <label><input id="dropdown" name="cha" type="radio" value="4a"/>Ashio</label>
+                    <label><input id="caja de chequeo" type="checkbox" value=0/>Si</label>
+                    <label><input id="caja de chequeo" type="checkbox" value=1/>por</label>
+                    <label><input id="caja de chequeo" type="checkbox" value=2/>fa</label>
+                    <label><input id="caja de chequeo" type="checkbox" value=3/>vor</label>
+                    <textarea class="feedback" placeholder="Dános tu opinión"></textarea>
+                    <button id="submit">Submit</button>
+            </form>
+        </div>
+    </body>
+</html>
