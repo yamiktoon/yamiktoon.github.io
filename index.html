@@ -8,24 +8,25 @@
     </head>
     <body>
         <div class="container">
-            <h1 id="title" class="center">Naza art Survey Form</h1>
-            <p id="description" class="center subtitle">¡Gracias por tomarte un tiempo para ayudarnos a mejorar!</p>
+            <header>
+                <h1 id="title" class="center">Naza art Survey Form</h1>
+                <p id="description" class="center subtitle">¡Gracias por tomarte un tiempo para ayudarnos a mejorar!</p>
+            </header>
             <form id="survey-form">
-                <section>
                     <div class="labelInputDiv">
-                        <label id="name-label" for="name">
+                        <label id="name-label" for="name" class="tL1">
                             Nombre
                         </label>
                         <input id="name" class="infoInput" type="text" placeholder="Coloque su nombre" required/>
                     </div>
                     <div class="labelInputDiv">
-                        <label id="last-name-label">
+                        <label id="last-name-label" for="last-name">
                             Apellido
                         </label>
                         <input id="last-name" class="infoInput" type="text" placeholder="Coloque su apellido" required/>
                     </div>
                     <div class="labelInputDiv">
-                        <label id="email-label">
+                        <label id="email-label" for="email">
                             Email
                         </label>
                         <input id="email" class="infoInput" type="email" placeholder="Coloque su email" required/>
@@ -34,9 +35,8 @@
                         <label id="number-label">
                             Edad
                         </label>
-                        <input id="number" class="infoInput" type="number" min="1" max="25" placeholder="Coloque su edad"/>
+                        <input id="number" class="infoInput" type="number" min="1" max="70" placeholder="Coloque su edad"/>
                     </div>
-                </section>
                 <select id="dropdown">
                 <option>a</option>
                 <option>b</option>
