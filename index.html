@@ -5,6 +5,22 @@
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <title>Naza art Survey Form</title>
         <link rel="stylesheet" href="nazaArtStyles.css">
+        <script>
+            window.addEventListener('load', function() {
+                const aCB = document.getElementById('another-checkbox');
+                const aText = document.getElementById('feedback');
+
+                aCB.addEventListener('change', function() {
+                    if (aCB.checked) {
+                        aText.style.display = 'block';
+                        aText.disabled = false;
+                    } else {
+                        aText.style.display = 'none';
+                        aText.disabled = true;
+                    }
+                });
+            });
+        </script>
     </head>
     <body>
         <div class="container">
@@ -37,20 +53,33 @@
                         </label>
                         <input id="number" class="infoInput" type="number" min="1" max="70" placeholder="Coloque su edad"/>
                     </div>
-                <select id="dropdown">
-                <option>a</option>
-                <option>b</option>
+            <div>
+                <p>
+                    ¿Cuál fue su experiencia con Naza Art SRL?
+                </p>
+                <select id="dropdown" class="selectexp">
+                    <option>Óptima</option>
+                    <option>Buena</option>
+                    <option>Media</option>
+                    <option>Regular</option>
+                    <option>Muy mala</option>
                 </select>
-                    <label><input id="dropdown" name="opt1" type="radio" value="1a"/>1</label>
-                    <label><input id="dropdown" name="opt2" type="radio" value="2a"/>2</label>
-                    <label><input id="dropdown" name="opt3" type="radio" value="3a"/>3</label>
-                    <label><input id="dropdown" name="opt4" type="radio" value="4a"/>4</label>
-                    <label><input id="caja de chequeo" type="checkbox" value=0/>5</label>
-                    <label><input id="caja de chequeo" type="checkbox" value=1/>6</label>
-                    <label><input id="caja de chequeo" type="checkbox" value=2/>7</label>
-                    <label><input id="caja de chequeo" type="checkbox" value=3/>8</label>
-                    <textarea class="feedback" placeholder="Dános tu opinión"></textarea>
-                    <button id="submit">Listo!</button>
+            </div>
+            <div>
+                <p>¿Qué mejoraría sobre la atención que recibió de parte de Naza Art?</p>
+                <label class="cBoxL"><input id="cBox" type="checkbox" value=0/>Atención a través de las dinstintas redes sociales</label>
+                <label class="cBoxL"><input id="cBox" type="checkbox" value=1/>Redacción de mensajes</label>
+                <label class="cBoxL"><input id="cBox" type="checkbox" value=2/>Claridad en la información</label>
+                <label class="cBoxL"><input id="cBox" type="checkbox" value=3/>Entrega de productos</label>
+                <label class="cBoxL"><input id="cBox" type="checkbox" value=4/>Servicio de entrega</label>
+                <label class="cBoxL"><input id="cBox" type="checkbox" value=5/>Calidad de los productos</label>
+                <div class="cb-and-textarea-wrapper">
+                    <label><input id="another-checkbox" type="checkbox" value=6/>Otro</label>
+                    <textarea id="feedback" class="feedback" placeholder="Dános tu opinión" disabled></textarea>
+                </div>
+            </div>
+                <textarea class="afeedback" placeholder="Dános tu opinión"></textarea>
+                <button id="submit">Listo!</button>
             </form>
         </div>
     </body>
